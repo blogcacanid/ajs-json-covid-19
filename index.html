@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">    
+    <title>Parsing Data Json Info Covid-19 AngularJs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <span class="navbar-brand"><img src="https://i.imgur.com/YLiSEbF.png" class="brand" style="margin-top: -9px;" height=30 /> Parsing Data Json Info Covid-19 AngularJs</span>
+        </div>
+      </div>
+    </nav>
+    <div class="container" ng-app="myApp">
+        <div ng-controller="MainCtrl">
+            <div class="row"> 
+                <!-- List of News -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="list-group" ng-repeat="row in resultGet">
+                            <li class="list-group-item">
+                                <p>Contry : {{ row.name }}</p>
+                                <p>Positif : {{ row.positif }}</p>
+                                <p>Sembuh : {{ row.sembuh }}</p>
+                                <p>Meninggal : {{ row.meninggal }}</p>
+                            </li>
+                        </ul>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
